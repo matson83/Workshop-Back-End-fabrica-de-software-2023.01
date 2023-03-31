@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Loja,Jogo
+from .models import Loja,Jogo,Cliente
 
 
 class JogoSerializer(serializers.ModelSerializer):
@@ -13,4 +13,7 @@ class LojaSerializer(serializers.ModelSerializer):
         model = Loja
         fields = ['nome','endereco','telefone']      
 
-
+class ClienteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cliente
+        fields = ['nome','endereco','telefone']

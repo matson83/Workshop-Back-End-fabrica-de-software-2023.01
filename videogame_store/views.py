@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from .models import Jogo , Loja
-from .serializer import JogoSerializer,LojaSerializer
+from .models import Jogo , Loja, Cliente
+from .serializer import JogoSerializer,LojaSerializer,ClienteSerializer
 
 
 class JogoViewSet(viewsets.ModelViewSet):
@@ -11,5 +11,9 @@ class JogoViewSet(viewsets.ModelViewSet):
 class LojaViewSet(viewsets.ModelViewSet):
     queryset = Loja.objects.all()
     serializer_class = LojaSerializer
+
+class ClienteViewSet(viewsets.ModelViewSet):
+    queryset = Cliente.objects.all()
+    serializer_class = ClienteSerializer
 
 
